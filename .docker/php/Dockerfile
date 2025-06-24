@@ -1,5 +1,8 @@
 FROM php:8.4-fpm
 
+# Install Nginx
+RUN apt-get update && apt-get install -y nginx supervisor
+
 # Copy configuration files from .docker/php/ directory
 COPY .docker/php/php.ini /usr/local/etc/php/
 COPY .docker/php/docker.conf /usr/local/etc/php-fpm.d/docker.conf
@@ -33,11 +36,6 @@ RUN pecl install pcov && docker-php-ext-enable pcov
 # pcntl
 RUN docker-php-ext-install pcntl
 
-# Xdebug
-# RUN pecl install xdebug \
-# && docker-php-ext-enable xdebug \
-# && echo ";zend_extension=xdebug" > /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-
 # Node.js, NPM, Yarn
 RUN curl -sL https://deb.nodesource.com/setup_22.x | bash -
 RUN apt-get install -y nodejs
@@ -58,13 +56,48 @@ RUN composer global require "laravel/installer"
 WORKDIR /root
 RUN git clone https://github.com/seebi/dircolors-solarized
 
+# Nginx configuration
+RUN echo 'server {\n\
+    listen 80;\n\
+    index index.php index.html;\n\
+    root /var/www/public;\n\
+    \n\
+    location / {\n\
+        try_files $uri $uri/ /index.php?$query_string;\n\
+    }\n\
+    \n\
+    location ~ \.php$ {\n\
+        fastcgi_pass 127.0.0.1:9000;\n\
+        fastcgi_index index.php;\n\
+        include fastcgi_params;\n\
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;\n\
+    }\n\
+}' > /etc/nginx/sites-available/default
+
+# Supervisor configuration
+RUN echo '[supervisord]\n\
+nodaemon=true\n\
+\n\
+[program:nginx]\n\
+command=nginx -g "daemon off;"\n\
+autostart=true\n\
+autorestart=true\n\
+\n\
+[program:php-fpm]\n\
+command=/usr/local/bin/entrypoint.sh php-fpm\n\
+autostart=true\n\
+autorestart=true' > /etc/supervisor/conf.d/supervisord.conf
+
 # Create www-data user directories and set permissions
 RUN mkdir -p /var/www/storage /var/www/bootstrap/cache \
     && chown -R www-data:www-data /var/www
 
-EXPOSE 5173
+EXPOSE 80
 WORKDIR /var/www
 
-# Use full path for entrypoint
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-CMD ["php-fpm"]
+# Copy application files
+COPY . /var/www/
+RUN chown -R www-data:www-data /var/www
+
+# Use supervisor to run both nginx and php-fpm
+CMD ["/usr/bin/supervisord"]
