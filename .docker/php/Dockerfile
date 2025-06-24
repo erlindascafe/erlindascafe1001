@@ -1,16 +1,17 @@
 FROM php:8.4-fpm
 
-COPY php.ini /usr/local/etc/php/
-COPY docker.conf /usr/local/etc/php-fpm.d/docker.conf
-COPY .bashrc /root/
+# Copy configuration files from .docker/php/ directory
+COPY .docker/php/php.ini /usr/local/etc/php/
+COPY .docker/php/docker.conf /usr/local/etc/php-fpm.d/docker.conf
+COPY .docker/php/.bashrc /root/
 
 # Copy the entrypoint script
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY .docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # mix
 RUN apt-get update \
-  && apt-get install -y build-essential zlib1g-dev default-mysql-client curl gnupg procps vim git unzip libzip-dev libpq-dev \
+  && apt-get install -y build-essential zlib1g-dev default-mysql-client curl gnupg procps vim git unzip libzip-dev libpq-dev netcat-openbsd \
   && docker-php-ext-install zip pdo_mysql pdo_pgsql pgsql
 
 # intl
@@ -57,9 +58,13 @@ RUN composer global require "laravel/installer"
 WORKDIR /root
 RUN git clone https://github.com/seebi/dircolors-solarized
 
+# Create www-data user directories and set permissions
+RUN mkdir -p /var/www/storage /var/www/bootstrap/cache \
+    && chown -R www-data:www-data /var/www
+
 EXPOSE 5173
 WORKDIR /var/www
 
-#entrypoint
-ENTRYPOINT ["entrypoint.sh"]
+# Use full path for entrypoint
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["php-fpm"]
