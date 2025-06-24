@@ -1,11 +1,11 @@
-FROM php:8.4-fmp
+FROM php:8.4-fpm
 
 # Install Nginx
 RUN apt-get update && apt-get install -y nginx supervisor
 
 # Copy configuration files from .docker/php/ directory
 COPY .docker/php/php.ini /usr/local/etc/php/
-COPY .docker/php/docker.conf /usr/local/etc/php-fmp.d/docker.conf
+COPY .docker/php/docker.conf /usr/local/etc/php-fpm.d/docker.conf
 COPY .docker/php/.bashrc /root/
 
 # Copy the entrypoint script
