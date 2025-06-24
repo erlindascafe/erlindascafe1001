@@ -20,8 +20,11 @@
 
                     <h3 class="text-white mb-3">House of Authentic Biryani and Shawarma.</h3>
 
-                    <p class="text-white">The café had been in the town for as long as anyone could remember, and it had
-                        become a beloved institution among the locals.</p>
+                    <p class="text-white">At the beginning of the pandemic, when the world abruptly stopped, we witnessed countless businesses shut down and many people lose their jobs during one of the most critical moments.
+
+In the midst of these challenges, we saw an opportunity to create something of our own. What started as a simple idea—offering homemade chicken biryani—grew into a small online venture. We experimented, listened to feedback, and slowly expanded, adding new items like espresso, milk tea, and frappes to our menu. Along the way, we invested in improving our store, enhancing the customer experience with new equipment and a bigger space.
+
+Through hard work, family support, and the loyalty of our customers, we built a business that not only survived difficult times but also thrived. Today, we continue to grow, expanding with franchise stores and maintaining the heart of what we do— offering delicious food and memorable experiences to our community.</p>
 
                     <!-- <a href="#barista-team" class="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4">Meet Baristas</a>
                                    -->

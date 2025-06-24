@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg w-100 fixed-top p-1">
     <div class="container">
-        <h2 class="navbar-brand d-flex align-items-center" href="{{ route('home.page') }}">
+        <h2 class="navbar-brand d-flex align-items-center">
             <!--<img src="images/coffee-beans.png" class="navbar-brand-image img-fluid" alt="Barista Cafe Template">-->
-            Erlinda's Cafe
+           <a class="text-white" href="{{ route('home.page') }}" > Erlinda's Cafe</a>
         </h2>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

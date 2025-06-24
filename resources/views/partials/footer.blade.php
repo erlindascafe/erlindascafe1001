@@ -8,24 +8,21 @@
 
                                 <strong class="text-white">
                                     <i class="bi-geo-alt me-2"></i>
-                                    Bandra West, Mumbai, Maharashtra 400050, India
+                                    Main Branch, Purok 2 Brgy. San Roque Rosario, Batangas (beside Montessori Institute & Lorna’s Bbq House)
                                 </strong>
 
                                 <ul class="social-icon mt-4">
                                     <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-facebook">
+                                        <a href="https://www.facebook.com/erlindascafe.official" class="social-icon-link bi-facebook" target="_new">
                                         </a>
                                     </li>
         
                                     <li class="social-icon-item">
-                                        <a href="https://x.com/minthu" target="_new" class="social-icon-link bi-twitter">
+                                        <a href="https://www.instagram.com/erlindascafe.official/" target="_new" class="social-icon-link bi-instagram">
                                         </a>
                                     </li>
 
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-whatsapp">
-                                        </a>
-                                    </li>
+                                    
                                 </ul>
                             </div>
 
@@ -34,17 +31,16 @@
 
                                 <p class="d-flex mb-1">
                                     <strong class="me-2">Phone:</strong>
-                                    <a href="tel: 305-240-9671" class="site-footer-link">
-                                        (65) 
-                                        305 2409 671
+                                    <a  class="site-footer-link">
+                                        +63 995 6526 342
                                     </a>
                                 </p>
 
                                 <p class="d-flex">
                                     <strong class="me-2">Email:</strong>
 
-                                    <a href="mailto:info@yourgmail.com" class="site-footer-link">
-                                        hello@barista.co
+                                    <a href="mailto:erlindascafe.official@gmail.com" class="site-footer-link">
+                                        erlindascafe.official@gmail.com
                                     </a>
                                 </p>
                             </div>
@@ -58,28 +54,23 @@
                                         Monday - Friday
                                         <span class="underline"></span>
 
-                                        <strong>9:00 - 18:00</strong>
+                                        <strong>9:00 AM - 11:00 PM</strong>
                                     </li>
 
                                     <li class="d-flex">
-                                        Saturday
+                                        Saturday - Sunday
                                         <span class="underline"></span>
 
-                                        <strong>11:00 - 16:30</strong>
+                                        <strong>9:00 AM - 12:00 MN</strong>
                                     </li>
 
-                                    <li class="d-flex">
-                                        Sunday
-                                        <span class="underline"></span>
-
-                                        <strong>Closed</strong>
-                                    </li>
+                                    
                                 </ul>
                             </div>
 
                             <div class="col-lg-8 col-12 mt-4">
-                                <p class="copyright-text mb-0">Copyright © Barista Cafe 2048 
-                                    - Design: <a rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate</a></p>
+                                <p class="copyright-text mb-0">Copyright © Erlinda's Cafe
+                                   
                             </div>
                     </div>
                 </footer>

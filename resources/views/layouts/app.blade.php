@@ -8,13 +8,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Barista Cafe HTML CSS Template</title>
+    <title>Erlinda's Cafe</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,700&display=swap"
         rel="stylesheet">
@@ -28,21 +28,35 @@
     <link href="css/tooplate-barista.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Harmattan&display=swap" rel="stylesheet">
-<style>
-    h2 {
-    font-family: 'Dr Sugiyama', cursive;
-    word-spacing: 10; /* Adjust this value as needed */
-}
+    <style>
+        h2 {
+            font-family: 'Dr Sugiyama', cursive;
+            word-spacing: 10;
+            /* Adjust this value as needed */
+        }
 
-p {
-      font-family: 'Harmattan', sans-serif;
-      font-size: 1.2rem;
-      line-height: 1.6;     /* Adjusts spacing between lines */
-      word-spacing: 2px;    /* Adjusts spacing between words */
-      letter-spacing: 0.5px;/* Adjusts spacing between letters */
-      color: #444;
-    }
+        p {
+            font-family: 'Harmattan', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            /* Adjusts spacing between lines */
+            word-spacing: 2px;
+            /* Adjusts spacing between words */
+            letter-spacing: 0.5px;
+            /* Adjusts spacing between letters */
+            color: #444;
+        }
 
+        .booking-form-image-wrap {
+            background-color: #fff;
+            /* White background */
+            height: 100%;
+            /* Optional: makes sure it fills the container */
+            padding: 1rem;
+            /* Optional: adds spacing inside */
+            border-radius: 8px;
+            /* Optional: smooth corners */
+        }
     </style>
 
     <!--
@@ -76,14 +90,11 @@ Bootstrap 5 HTML CSS Template
 
 <!-- AOS Init -->
 <script>
-    AOS.init(
-        {
-            duration: 800, // Animation duration in milliseconds
-            easing: 'ease-in-out', // Animation easing function
-            offset: 100, // Offset (in pixels) from the original trigger point
-        }
-    );
-
+    AOS.init({
+        duration: 800, // Animation duration in milliseconds
+        easing: 'ease-in-out', // Animation easing function
+        offset: 100, // Offset (in pixels) from the original trigger point
+    });
 </script>
 
 </html>
