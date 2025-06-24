@@ -1,11 +1,11 @@
-FROM php:8.4-fpm
+FROM php:8.4-fmp
 
 # Install Nginx
 RUN apt-get update && apt-get install -y nginx supervisor
 
 # Copy configuration files from .docker/php/ directory
 COPY .docker/php/php.ini /usr/local/etc/php/
-COPY .docker/php/docker.conf /usr/local/etc/php-fpm.d/docker.conf
+COPY .docker/php/docker.conf /usr/local/etc/php-fmp.d/docker.conf
 COPY .docker/php/.bashrc /root/
 
 # Copy the entrypoint script
@@ -97,6 +97,11 @@ WORKDIR /var/www
 
 # Copy application files
 COPY . /var/www/
+
+# Install Composer dependencies - THIS IS THE FIX!
+RUN composer install --no-dev --optimize-autoloader --no-interaction
+
+# Set permissions after installing dependencies
 RUN chown -R www-data:www-data /var/www
 
 # Use supervisor to run both nginx and php-fpm
