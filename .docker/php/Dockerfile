@@ -98,6 +98,9 @@ WORKDIR /var/www
 # Copy application files
 COPY . /var/www/
 
+# Copy SSL certificates
+COPY .docker/certs/ca-cert.pem /var/www/ca-cert.pem
+
 # Install Composer dependencies - THIS IS THE FIX!
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
