@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg w-100 fixed-top p-3">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg w-100 fixed-top p-1">
+    <div class="container">
         <h2 class="navbar-brand d-flex align-items-center" href="{{ route('home.page') }}">
             <!--<img src="images/coffee-beans.png" class="navbar-brand-image img-fluid" alt="Barista Cafe Template">-->
             Erlinda's Cafe
