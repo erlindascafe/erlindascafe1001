@@ -91,9 +91,10 @@ Bootstrap 5 HTML CSS Template
 <!-- AOS Init -->
 <script>
     AOS.init({
-        duration: 800, // Animation duration in milliseconds
+        duration: 1000, // Animation duration in milliseconds
         easing: 'ease-in-out', // Animation easing function
         offset: 100, // Offset (in pixels) from the original trigger point
+        once: false
     });
 </script>
 

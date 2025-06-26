@@ -11,8 +11,8 @@
     $(function() {
       $('.hero-slides').vegas({
           slides: [
-              { src: 'images/erlindas1.jpg' },
-              { src: 'images/erlindas2.jpg' }
+              { src: 'images/erlindas2.jpg' },
+              { src: 'images/erlindas1.jpg' }
           ],
           timer: false,
           animation: 'kenburns',

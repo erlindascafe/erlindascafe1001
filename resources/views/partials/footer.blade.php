@@ -51,14 +51,14 @@
 
                                 <ul class="opening-hours-list">
                                     <li class="d-flex">
-                                        Monday - Friday
+                                        Monday - Thursday
                                         <span class="underline"></span>
 
                                         <strong>9:00 AM - 11:00 PM</strong>
                                     </li>
 
                                     <li class="d-flex">
-                                        Saturday - Sunday
+                                        Friday - Sunday
                                         <span class="underline"></span>
 
                                         <strong>9:00 AM - 12:00 MN</strong>
