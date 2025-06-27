@@ -57,6 +57,23 @@
             border-radius: 8px;
             /* Optional: smooth corners */
         }
+        /* Zoom effect on hover */
+.menu-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-image:hover {
+    transform: scale(1.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    .menu-item:hover .menu-image {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
     </style>
 
     <!--

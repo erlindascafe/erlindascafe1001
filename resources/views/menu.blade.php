@@ -9,16 +9,16 @@
             </div>
 
             <div data-aos="fade-right" class="col-6 col-md-3 mb-4">
-                <img src="{{ asset('images/menu1.jpg') }}" class="img-fluid rounded shadow" alt="Menu 1">
+                <img src="{{ asset('images/menu1.jpg') }}" class="img-fluid rounded shadow menu-image" alt="Menu 1">
             </div>
             <div data-aos="flip-up" class="col-6 col-md-3 mb-4">
-                <img src="{{ asset('images/menu2.jpg') }}" class="img-fluid rounded shadow" alt="Menu 2">
+                <img src="{{ asset('images/menu2.jpg') }}" class="img-fluid rounded shadow menu-image" alt="Menu 2">
             </div>
             <div data-aos="flip-up" class="col-6 col-md-3 mb-4">
-                <img src="{{ asset('images/menu3.jpg') }}" class="img-fluid rounded shadow" alt="Menu 3">
+                <img src="{{ asset('images/menu3.jpg') }}" class="img-fluid rounded shadow menu-image" alt="Menu 3">
             </div>
             <div data-aos="fade-left" class="col-6 col-md-3 mb-4">
-                <img src="{{ asset('images/menu4.jpg') }}" class="img-fluid rounded shadow" alt="Menu 4">
+                <img src="{{ asset('images/menu4.jpg') }}" class="img-fluid rounded shadow menu-image" alt="Menu 4">
             </div>
 
             <!-- Order Now Button -->
